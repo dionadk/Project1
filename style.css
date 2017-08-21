@@ -1,0 +1,17 @@
+body{
+  background-color:#fff;
+  margin: 0 auto;
+}
+img{
+
+  margin: 50px;
+}
+form{
+  margin-left: 100px;
+}
+#gameWord{
+
+  margin-left: 100px;
+  margin-top: 50px;
+  font-size: 30px;
+}

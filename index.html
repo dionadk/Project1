@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Hangman</title>
+</head>
+<body>
+  <header> Hangman </header>
+  <div>
+    <img src="images/hangman.png" alt="Hangman">
+  </div>
+  <form id="hangman">
+    <input type="text" id="letter" placeholder="Guess a letter" />
+    <input id="guess" name="guess" type="submit" value="Guess" />
+    <button id="restart" name="restart" type="button">Restart</button>
+</form>
+<div id="gameWord">Current Word</div>
+  <script src="script.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</body>
+</html>
