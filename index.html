@@ -3,25 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
   <title>Hangman</title>
 </head>
 <body>
-  <h3><form id="formCategory">
-    Hangman <fieldset><span class="category">
-
+  <h3><span>Hangman</span></h3>
+<label id="category">Select Category
       <select id = "selCategory">
-      <option >food</option>
-      <option >movies</option>
-      <option >sports</option>
-      </select>
-      <input type = "button"
-      value = "Categories"/>
+      <option>food</option>
+      <option>movies</option>
+      <option>sports</option>
+      </select></label>
 
-    </span>
-    </fieldset>
 
-  </form>
-</h3>
   <div class="image">
     <img id="hangImg" src="images/hang_1.gif" alt="Hangman">
 <span id="strikes">Strikes</span></div>
@@ -36,6 +31,7 @@
   <button id="restart" name="restart" type="button">New Word</button>
 </form>
 </div>
+<label id="messsage"></label>
 
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"

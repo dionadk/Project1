@@ -1,60 +1,60 @@
-body{
-  background-color:rgb(253,163,69);
-  margin-top: 0 auto;
+body {
+background-color : rgb(253, 163, 69);
+margin : 0 auto;
 }
-#formCategory{
-  background-color: rgb(27,137,174);
-  margin: 0 auto;
-
-
+#selCategory, #category {
+margin : 20px auto;
+padding : 30px;
+font-family : 'Nixie One', cursive;
+font-size : 20px;
 }
-
-h3{
-  color: white;
-  font-size: 25px;
-  margin: 0;
-
-
+h3 {
+color : white;
+font-size : 25px;
+margin : 0;
+padding : 30px;
+font-family : 'Monoton', cursive;
+background-color : rgb(27, 137, 174);
 }
-span#strikes{
-  float:right;
-  padding: 50px;
-  font-size: 25px;
+span#strikes {
+float : right;
+padding : 50px;
+font-size : 25px;
+font-family : 'Nixie One', cursive;
 }
-span#guessLet{
-  margin-top: -20px;
-  float:right;
-  font-size: 25px;
+span#guessLet {
+border : 20px;
+float : right;
+font-size : 25px;
+font-family : 'Nixie One', cursive;
+margin-top : -50px;
 }
-.image img{
-
-  margin-top: 70px;
-  margin-left: 100px;
+.image img {
+margin-top : 70px;
+margin-left : 100px;
 }
-#hangman{
-
-  text-align: center;
+form#hangman {
+text-align : center;
 }
-#gameWord{
-  color: rgb(27,137,174);
-  margin-left: 50px;
-  margin-top: 50px;
-  font-size: 50px;
-  text-align:center;
-  padding-right: 50px;
+#gameWord {
+color : rgb(27, 137, 174);
+margin-left : 50px;
+margin-top : 50px;
+font-size : 50px;
+text-align : center;
+padding-right : 50px;
 }
-
-.textForm{
-  margin-left: 50px;
-  margin-top: 50px;
-  text-align: center;
-  padding: 50px;
+.textForm {
+margin-left : 50px;
+margin-top : 50px;
+text-align : center;
+padding : 50px;
 }
 span.category {
-  float: right;
-  font-size: 20px;
+float : right;
+font-size : 20px;
 }
-fieldset{
-  border: 0;
-  margin: 0 auto
+fieldset {
+border : 0;
+margin : 0 auto;
 }
