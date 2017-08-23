@@ -1,23 +1,60 @@
 body{
-  background-color:#fff;
+  background-color:rgb(253,163,69);
+  margin-top: 0 auto;
+}
+#formCategory{
+  background-color: rgb(27,137,174);
   margin: 0 auto;
-}
-img{
 
-  margin: 50px;
+
 }
-form{
+
+h3{
+  color: white;
+  font-size: 25px;
+  margin: 0;
+
+
+}
+span#strikes{
+  float:right;
+  padding: 50px;
+  font-size: 25px;
+}
+span#guessLet{
+  margin-top: -20px;
+  float:right;
+  font-size: 25px;
+}
+.image img{
+
+  margin-top: 70px;
   margin-left: 100px;
 }
-#gameWord{
+#hangman{
 
+  text-align: center;
+}
+#gameWord{
+  color: rgb(27,137,174);
   margin-left: 50px;
   margin-top: 50px;
-  font-size: 30px;
+  font-size: 50px;
   text-align:center;
+  padding-right: 50px;
 }
-.blankSpaces{
+
+.textForm{
   margin-left: 50px;
   margin-top: 50px;
   text-align: center;
+  padding: 50px;
+}
+span.category {
+  float: right;
+  font-size: 20px;
+}
+fieldset{
+  border: 0;
+  margin: 0 auto
 }

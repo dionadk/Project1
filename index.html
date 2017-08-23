@@ -6,18 +6,35 @@
   <title>Hangman</title>
 </head>
 <body>
-  <header> Hangman </header>
-  <div>
-    <img src="images/hangman.png" alt="Hangman">
-  </div>
-  <form id="hangman">
-    <input type="text" id="letter" placeholder="Guess a letter" />
-    <input id="guess" name="guess" type="submit" value="Guess" />
-    <button id="restart" name="restart" type="button">Restart</button>
+  <h3><form id="formCategory">
+    Hangman <fieldset><span class="category">
+
+      <select id = "selCategory">
+      <option >food</option>
+      <option >movies</option>
+      <option >sports</option>
+      </select>
+      <input type = "button"
+      value = "Categories"/>
+
+    </span>
+    </fieldset>
+
+  </form>
+</h3>
+  <div class="image">
+    <img id="hangImg" src="images/hang_1.gif" alt="Hangman">
+<span id="strikes">Strikes</span></div>
+  <div><span id="guessLet"></span></div>
+
+<div id="gameWord">
+  <label id="resultLbl"></label></div>
+<div class="textForm">
+<form id="hangman">
+  <input type="text" maxlength="1" id="letter" placeholder="Guess a letter" />
+  <input id="guess" name="guess" type="submit" value="Guess" />
+  <button id="restart" name="restart" type="button">New Word</button>
 </form>
-<div id="gameWord">Current Word</div>
-<div class="blankSpaces">
-  <label id="resultLbl"></label>
 </div>
 
   <script
