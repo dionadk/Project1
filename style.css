@@ -58,3 +58,10 @@ fieldset {
 border : 0;
 margin : 0 auto;
 }
+span#hanglogoImg img{
+height: 35px;
+margin-top: 10px;
+}
+main{
+  display: flex;
+}

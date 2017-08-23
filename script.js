@@ -5,9 +5,9 @@ class myWords {
             this.sports = []
     }
 }
-myWords.movies = ['jaws', 'titanic', 'back to the future'];
+myWords.movies = ['jaws', 'titanic', 'back to the future','Forest Gump','Star Wars','Rocky','The Dark Knight'];
 myWords.food = ['pizza', 'burger', 'hot dog', 'noodles'];
-myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis'];
+myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis','Base Ball','Rugby'];
 
 var userWord = []; //empty array to generate blank spaces
 var score = 0; //t track your chances
@@ -88,7 +88,8 @@ function guessLetter(letter) {
 
             count = count + 1;
             score = chances - count;
-            alert(`you have ${score} tries`);
+            $(".error-messages").text(`you have ${score} tries`).fadeIn();
+            //alert(`you have ${score} tries`);
             endChance();
             hangMan();
             return;
