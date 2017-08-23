@@ -16,13 +16,13 @@ padding : 30px;
 font-family : 'Monoton', cursive;
 background-color : rgb(27, 137, 174);
 }
-span#strikes {
+#strikes {
 float : right;
 padding : 50px;
 font-size : 25px;
 font-family : 'Nixie One', cursive;
 }
-span#guessLet {
+#guessLet {
 border : 20px;
 float : right;
 font-size : 25px;
@@ -33,7 +33,7 @@ margin-top : -50px;
 margin-top : 70px;
 margin-left : 100px;
 }
-form#hangman {
+#hangman {
 text-align : center;
 }
 #gameWord {
@@ -58,10 +58,21 @@ fieldset {
 border : 0;
 margin : 0 auto;
 }
-span#hanglogoImg img{
+#hanglogoImg img{
 height: 35px;
 margin-top: 10px;
 }
 main{
   display: flex;
+}
+.error-messages{
+height: 70px;
+width: 220px;
+border: 100px;
+border-color: rgb(27, 137, 174);
+border-width: 1px;
+border-style: solid;
+text-align: center;
+margin-left: 200px;
+background-color: rgb(27, 137, 174);
 }

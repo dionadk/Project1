@@ -8,7 +8,7 @@
   <title>Hangman</title>
 </head>
 <body>
-  <h3>Han<span id="hanglogoImg"><img src="images/hangman_logo.png"></span>man</h3>
+  <h3>Han<span id="hanglogoImg"><img src="images/hangman_logo.png" alt="g"></span>man</h3>
 <label id="category">Select Category
       <select id = "selCategory">
       <option>food</option>
@@ -22,6 +22,7 @@
 <span id="strikes">Strikes</span>
 <label id="message"></label></div>
   <div><span id="guessLet"></span></div>
+  <div class="error-messages" style="display:none;"></div>
 
 <div id="gameWord">
   <label id="resultLbl"></label></div>
@@ -32,7 +33,7 @@
   <button id="restart" name="restart" type="button">New Word</button>
 </form>
 </div>
-<div class="error-messages" style="display:none;"></div>
+
 
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"

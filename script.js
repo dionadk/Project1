@@ -5,9 +5,9 @@ class myWords {
             this.sports = []
     }
 }
-myWords.movies = ['jaws', 'titanic', 'back to the future','Forest Gump','Star Wars','Rocky','The Dark Knight'];
+myWords.movies = ['jaws', 'titanic', 'back to the future', 'Forest Gump', 'Star Wars', 'Rocky', 'The Dark Knight'];
 myWords.food = ['pizza', 'burger', 'hot dog', 'noodles'];
-myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis','Base Ball','Rugby'];
+myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis', 'Base Ball', 'Rugby'];
 
 var userWord = []; //empty array to generate blank spaces
 var score = 0; //t track your chances
@@ -88,7 +88,8 @@ function guessLetter(letter) {
 
             count = count + 1;
             score = chances - count;
-            $(".error-messages").text(`you have ${score} tries`).fadeIn();
+            $(".error-messages").html(`you have ${score} tries`).fadeIn(2000);
+            $(".error-messages").html(`you have ${score} tries`).fadeOut(1000);
             //alert(`you have ${score} tries`);
             endChance();
             hangMan();
@@ -116,8 +117,8 @@ function checkMatch() {
         if (userWord[i] === "_ ")
             return;
     }
-    alert("you got it right");
-    alert(`tries you took ${count}`);
+    $(".error-messages").html(`Congrats!!!You took ${count} tries`).fadeIn(3000);
+    $(".error-messages").html(`Congrats!!!You took ${count} tries`).fadeOut(4000);
 
 }
 
@@ -151,8 +152,8 @@ function hangMan() {
 // game over
 function endChance() {
     if (score === 0) {
-        alert("you have reached your max tries")
-        alert(`The word is ${currentWord}`)
+        $(".error-messages").html(`Hanged!!!you have reached your max tries.The word is ${currentWord}`).fadeIn(3000);
+        $(".error-messages").html(`Hanged!!!you have reached your max tries.The word is ${currentWord}`).fadeOut(4000);
     }
 }
 generateWord();
