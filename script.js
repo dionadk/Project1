@@ -5,9 +5,9 @@ class myWords {
             this.sports = []
     }
 }
-myWords.movies = ['jaws', 'titanic', 'back to the future', 'Forest Gump', 'Star Wars', 'Rocky', 'The Dark Knight'];
+myWords.movies = ['jaws', 'titanic', 'back to the future', 'forest Gump', 'star Wars', 'rocky', 'the dark knight'];
 myWords.food = ['pizza', 'burger', 'hot dog', 'noodles'];
-myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis', 'Base Ball', 'Rugby'];
+myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis', 'base ball', 'rugby'];
 
 var userWord = []; //empty array to generate blank spaces
 var score = 0; //t track your chances
@@ -102,7 +102,7 @@ function guessLetter(letter) {
 function checkMatchLetter(letterCh) {
     for (var i = 0; i < splitWords.length; i++) {
         if (splitWords[i] == letterCh)
-            userWord[i] = letterCh;
+            userWord[i] = letterCh.toUpperCase();
     }
     var hangmanWord = '';
     for (var j = 0; j < userWord.length; j++) {
