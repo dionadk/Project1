@@ -5,7 +5,7 @@ class myWords {
             this.sports = []
     }
 }
-myWords.movies = ['jaws', 'titanic', 'back to the future', 'forest Gump', 'star Wars', 'rocky', 'the dark knight'];
+myWords.movies = ['jaws', 'titanic', 'back to the future', 'forest gump', 'star wars', 'rocky', 'the dark knight'];
 myWords.food = ['pizza', 'burger', 'hot dog', 'noodles', 'pasta', 'salad', 'ravioli', 'buritto'];
 myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis', 'base ball', 'rugby', 'cricket', 'volley ball'];
 
@@ -129,8 +129,8 @@ function checkMatch() {
         if (userWord[i] === "_ ")
             return;
     }
-    $(".error-messages").html(`CONGRATS!!!YOU TOOK ${count} TRIES`).fadeIn(3000);
-    $(".error-messages").html(`CONGRATS!!!YOU TOOK ${count} TRIES`).fadeOut(4000);
+    $(".error-messages").html(`CONGRATS!!!YOU WIN`).fadeIn(3000);
+    $(".error-messages").html(`CONGRATS!!!YOU WIN`).fadeOut(4000);
     win++;
     $("#winSummary").text(win);
 }
@@ -165,8 +165,8 @@ function hangMan() {
 // game over
 function endChance() {
     if (score === 0) {
-        $(".error-messages").html(`HANGED!!!YOU HAVE REACHED YOUR MAX TRIES.THE WORD IS ${currentWord}`).fadeIn(3000);
-        $(".error-messages").html(`HANGED!!!YOU HAVE REACHED YOUR MAX TRIES.THE WORD IS ${currentWord}`).fadeOut(4000);
+        $(".error-messages").html(`HANGED!!!YOU HAVE REACHED YOUR MAX TRIES.THE WORD IS ${currentWord.toUpperCase()}`).fadeIn(3000);
+        $(".error-messages").html(`HANGED!!!YOU HAVE REACHED YOUR MAX TRIES.THE WORD IS ${currentWord.toUpperCase()}`).fadeOut(5000);
         loss++;
         $("#lossSummary").text(loss);
         console.log(loss);

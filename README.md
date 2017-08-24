@@ -28,7 +28,12 @@ if the guess is wrong , hangman image gets updated.
 To check if the user took all the tries
 6. restart
 new word tab will restart the whole game and generate a random word
-
-used fadeIn and fadeOut to display the error messages and the win messages
+# project functionality added
+1.user can enter only single characters - used a max-length 1.
+2.trim is used to delete extra spaces in the input text area
+3.used fadeIn and fadeOut to display the error messages and the win messages
+# functionality to be added
+1.time based scoring
+2.hint displayed if user entered 3 wrong tries.
 #BONUS-1
 added score board to track the no of wins and loss a player makes
