@@ -6,8 +6,8 @@ class myWords {
     }
 }
 myWords.movies = ['jaws', 'titanic', 'back to the future', 'forest Gump', 'star Wars', 'rocky', 'the dark knight'];
-myWords.food = ['pizza', 'burger', 'hot dog', 'noodles'];
-myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis', 'base ball', 'rugby'];
+myWords.food = ['pizza', 'burger', 'hot dog', 'noodles', 'pasta', 'salad', 'ravioli', 'buritto'];
+myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis', 'base ball', 'rugby', 'cricket', 'volley ball'];
 
 var userWord = []; //empty array to generate blank spaces
 var score = 0; //t track your chances
@@ -15,8 +15,10 @@ var chances = 6; // max cahnce to try
 var count = 0;
 var splitWords = []; // splits each letter in a word
 var currentWord = []; // stores the random generated word
-var guessAlpabet = [];
+var guessAlphabet = [];
 var words = myWords.food;
+var win = 0;
+var loss = 0;
 
 //event listener----
 //selct dropdown list
@@ -54,14 +56,18 @@ function restart() {
 
     $("#hangImg").attr("src", "images/hang_1.gif");
     $("#letter").val('');
-    guessAlpabet = [];
+    guessAlphabet = [];
     userWord = [];
-    document.getElementById("guessLet").innerText = guessAlpabet;
+    document.getElementById("guessLet").innerText = guessAlphabet;
     generateWord();
 }
 // generate random word
 function generateWord() {
-    currentWord = words[Math.floor(Math.random() * words.length)];
+    var selectWord = '';
+    do {
+        selectWord = words[Math.floor(Math.random() * words.length)];
+    } while (currentWord === selectWord);
+    currentWord = selectWord;
     splitWords = currentWord.split('');
     var hangmanWord = '';
     // checking for spaces between words .
@@ -74,9 +80,15 @@ function generateWord() {
 
 //user inputs and checking for match
 function guessLetter(letter) {
+    if (chances - count === 0)
+        return;
     // array to keep track of the letters entered by user
-    guessAlpabet.push(letter);
-    document.getElementById("guessLet").innerText = guessAlpabet;
+    if (guessAlphabet.includes(letter))
+        return;
+
+    guessAlphabet.push(letter);
+
+    document.getElementById("guessLet").innerText = guessAlphabet;
     letter = letter.toLowerCase();
     for (var i = 0; i < splitWords.length; i++) {
         // check if the user word matches to any word in the splitWords array.
@@ -88,8 +100,8 @@ function guessLetter(letter) {
 
             count = count + 1;
             score = chances - count;
-            $(".error-messages").html(`you have ${score} tries`).fadeIn(2000);
-            $(".error-messages").html(`you have ${score} tries`).fadeOut(1000);
+            $(".error-messages").html(`YOU HAVE ${score} TRIES`).fadeIn(2000);
+            $(".error-messages").html(`YOU HAVE ${score} TRIES`).fadeOut(1000);
             //alert(`you have ${score} tries`);
             endChance();
             hangMan();
@@ -117,9 +129,10 @@ function checkMatch() {
         if (userWord[i] === "_ ")
             return;
     }
-    $(".error-messages").html(`Congrats!!!You took ${count} tries`).fadeIn(3000);
-    $(".error-messages").html(`Congrats!!!You took ${count} tries`).fadeOut(4000);
-
+    $(".error-messages").html(`CONGRATS!!!YOU TOOK ${count} TRIES`).fadeIn(3000);
+    $(".error-messages").html(`CONGRATS!!!YOU TOOK ${count} TRIES`).fadeOut(4000);
+    win++;
+    $("#winSummary").text(win);
 }
 
 //assigning parts to the man
@@ -152,8 +165,15 @@ function hangMan() {
 // game over
 function endChance() {
     if (score === 0) {
-        $(".error-messages").html(`Hanged!!!you have reached your max tries.The word is ${currentWord}`).fadeIn(3000);
-        $(".error-messages").html(`Hanged!!!you have reached your max tries.The word is ${currentWord}`).fadeOut(4000);
+        $(".error-messages").html(`HANGED!!!YOU HAVE REACHED YOUR MAX TRIES.THE WORD IS ${currentWord}`).fadeIn(3000);
+        $(".error-messages").html(`HANGED!!!YOU HAVE REACHED YOUR MAX TRIES.THE WORD IS ${currentWord}`).fadeOut(4000);
+        loss++;
+        $("#lossSummary").text(loss);
+        console.log(loss);
     }
+}
+
+function setScore() {
+
 }
 generateWord();

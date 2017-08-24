@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
-  <title>Hangman</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+	<title>Hangman</title>
 </head>
+
 <body>
-  <h3>Han<span id="hanglogoImg"><img src="images/hangman_logo.png" alt="g"></span>man</h3>
-<label id="category">Select Category
-      <select id = "selCategory">
-      <option>food</option>
-      <option>movies</option>
-      <option>sports</option>
-      </select></label>
-
-
-  <div class="image">
-    <img id="hangImg" src="images/hang_1.gif" alt="Hangman">
-<span id="strikes">Strikes</span>
-<label id="message"></label></div>
-  <div><span id="guessLet"></span></div>
-  <div class="error-messages" style="display:none;"></div>
-
-<div id="gameWord">
-  <label id="resultLbl"></label></div>
-<div class="textForm">
-<form id="hangman">
-  <input type="text" maxlength="1" id="letter" placeholder="Guess a letter" />
-  <input id="guess" name="guess" type="submit" value="Guess" />
-  <button id="restart" name="restart" type="button">New Word</button>
-</form>
-</div>
-
-
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+	<!-- header -->
+	<div class="flex-container">
+		<div class="header">
+			<h3>Han</h3>
+			<img src="images/hangman_logo.png" alt="g">
+			<h3 style="padding:30px 0;">man</h3>
+		</div>
+		<div class="dropdown">
+			<label id="category">Select Category
+				<select id="selCategory">
+					<option>food</option>
+					<option>movies</option>
+					<option>sports</option>
+				</select>
+			</label>
+		</div>
+	</div>
+	<!-- scoresheet -->
+	<div class="scoreBoard">
+		<div class="win-flex">
+			<h3 id="win">Won</h3>
+		</div>
+		<div class="loss-flex">
+			<h3 id="loss">Loss</h3>
+		</div>
+	</div>
+	<div class=display-score>
+		<div class="win-flex">
+			<h3 id="winSummary">0</h3>
+		</div>
+		<div class="loss-flex">
+			<h3 id="lossSummary">0</h3>
+		</div>
+	</div>
+	<!-- hangman image -->
+	<div class="image" style="display:flex;justify-content:center;margin:0;">
+		<img id="hangImg" src="images/hang_1.gif" alt="Hangman">
+	</div>
+	<!-- messages -->
+	<div class="error-flex">
+		<div class="error-messages" style="display:none;"></div>
+	</div>
+	<div class="gameWord-flex">
+		<div id="gameWord">
+			<label id="resultLbl"></label>
+		</div>
+	</div>
+	<!-- guessed letters -->
+	<div class="guessLet-flex"> <span id="guessLet"></span>
+	</div>
+	<!-- input word -->
+	<div class="textForm">
+    <form>
+		<input type="text" maxlength="1" id="letter" placeholder="Guess a letter" />
+		<input id="guess" name="guess" type="submit" value="Guess" />
+		<button id="restart" name="restart" type="button">New Word</button>
+    </form>
+  </div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
 </body>
+
 </html>

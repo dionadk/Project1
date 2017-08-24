@@ -30,3 +30,5 @@ To check if the user took all the tries
 new word tab will restart the whole game and generate a random word
 
 used fadeIn and fadeOut to display the error messages and the win messages
+#BONUS-1
+added score board to track the no of wins and loss a player makes
