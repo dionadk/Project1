@@ -5,7 +5,7 @@ Created a class - myWords, and objects as different categories
 # How to play the gameWord
 User has 6 chances for wrong guesses.
 # Technologies used
-HTML,CSS,JS and jquery
+HTML,CSS,JS and jQuery
 # How it works
 #Even listener1 - select category
 user can choose a category from the drop down list

@@ -6,7 +6,7 @@ class myWords {
     }
 }
 myWords.movies = ['jaws', 'titanic', 'back to the future', 'forrest gump', 'star wars', 'rocky', 'the dark knight'];
-myWords.food = ['pizza', 'burger', 'hot dog', 'noodles', 'pasta', 'salad', 'ravioli', 'buritto'];
+myWords.food = ['pizza', 'burger', 'hot dog', 'noodles', 'pasta', 'salad', 'ravioli', 'buritto','soup'];
 myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis', 'base ball', 'rugby', 'cricket', 'volley ball'];
 
 var userWord = []; //empty array to generate blank spaces
