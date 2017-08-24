@@ -29,8 +29,8 @@ h3 {
 }
 /*drop down style*/
 #category {
-
-    padding: 40px 10px;
+    font-weight: bold;
+    padding: 40px 20px;
     font-family: 'Nixie One', cursive;
     font-size: 20px;
     color: #fff;
