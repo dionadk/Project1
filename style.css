@@ -1,11 +1,10 @@
 body {
     background-color: rgb(253, 163, 69);
-    /*background-image: url('images/notepad.jpg');*/
-
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
 }
+/*header style*/
 .flex-container {
     display: flex;
     height: 85px;
@@ -17,8 +16,19 @@ body {
     justify-content: flex-start;
     display: flex
 }
+img {
+    margin-top: 40px;
+    height: 35px;
+}
+h3 {
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    padding: 30px 0 30px 10px;
+    font-family: 'Monoton', cursive;
+}
+/*drop down style*/
 #category {
-    /*margin : 20px auto;*/
 
     padding: 40px 10px;
     font-family: 'Nixie One', cursive;
@@ -31,66 +41,13 @@ body {
     font-size: 15px;
     font-family: 'Nixie One', cursive;
 }
-h3 {
-    color: white;
-    font-size: 25px;
-    margin: 0;
-    padding: 30px 0 30px 10px;
-    font-family: 'Monoton', cursive;
-    /*background-color : rgb(27, 137, 174);*/
-}
+
 .dropdown {
     justify-content: flex-end;
     display: flex;
 }
-#strikes {
-    float: right;
-    padding: 50px;
-    font-size: 25px;
-    font-family: 'Nixie One', cursive;
-}
-#guessLet {
-    border: 20px;
-    float: right;
-    font-size: 25px;
-    font-family: 'Nixie One', cursive;
-    /*margin-top : -50px;*/
 
-    text-decoration: line-through;
-}
-img {
-    margin-top: 40px;
-    height: 35px;
-}
-image {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-#gameWord {
-    color: rgb(27, 137, 174);
-    margin-left: 50px;
-    margin-top: 50px;
-    font-size: 50px;
-    text-align: center;
-    padding-right: 50px;
-}
-.textForm {
-    text-align: center;
-    padding: 20px;
-}
-.error-flex,
-.guessLet-flex {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    height: 30px;
-}
-.error-messages {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 20px;
-}
+/*score sheet style*/
 .scoreBoard {
     display: flex;
     justify-content: center;
@@ -119,8 +76,50 @@ image {
     justify-content: center;
     margin: 0;
 }
+/*hangman image*/
+.image {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
 #hangImg {
     height: 150px;
     width: 150px;
     margin-top: -50px;
+}
+/*messages*/
+.error-flex,
+.guessLet-flex {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: 30px;
+}
+.error-messages {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+/*user guessed letter*/
+#guessLet {
+    border: 20px;
+    float: right;
+    font-size: 25px;
+    font-family: 'Nixie One', cursive;
+    text-decoration: line-through;
+}
+
+
+#gameWord {
+    color: rgb(27, 137, 174);
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+    padding-right: 50px;
+}
+/*input word */
+.textForm {
+    text-align: center;
+    padding: 20px;
 }

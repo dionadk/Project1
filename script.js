@@ -5,7 +5,7 @@ class myWords {
             this.sports = []
     }
 }
-myWords.movies = ['jaws', 'titanic', 'back to the future', 'forest gump', 'star wars', 'rocky', 'the dark knight'];
+myWords.movies = ['jaws', 'titanic', 'back to the future', 'forrest gump', 'star wars', 'rocky', 'the dark knight'];
 myWords.food = ['pizza', 'burger', 'hot dog', 'noodles', 'pasta', 'salad', 'ravioli', 'buritto'];
 myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis', 'base ball', 'rugby', 'cricket', 'volley ball'];
 

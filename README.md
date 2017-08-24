@@ -35,5 +35,6 @@ new word tab will restart the whole game and generate a random word
 # functionality to be added
 1.time based scoring
 2.hint displayed if user entered 3 wrong tries.
+3.alphabet button keyboard
 #BONUS-1
 added score board to track the no of wins and loss a player makes
