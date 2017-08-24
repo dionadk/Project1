@@ -37,5 +37,5 @@ new word tab will restart the whole game and generate a random word
 2.hint displayed if user entered 3 wrong tries.
 3.alphabet button keyboard
 4.Two player game
-#BONUS-1
+# BONUS-1
 added score board to track the no of wins and loss a player makes
