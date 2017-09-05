@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- AS - convention is to use kebab/dash separated css/html selectors, so
+selCategory would be sel-category etc. -->
+<!-- AS - like the use of comments in HTML and CSS! -->
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
@@ -15,7 +17,8 @@
 		<div class="header">
 			<h3>Han</h3>
 			<img src="images/hangman_logo.png" alt="g">
-			<h3 style="padding:30px 0;">man</h3>
+			<!-- AS: I would avoid inline styling like this, instead add a class -->
+			<h3 style="padding:30px 0;">man</h3> 
 		</div>
 		<div class="dropdown">
 			<label id="category">Select Category
@@ -68,8 +71,9 @@
 		<button id="restart" name="restart" type="button">New Word</button>
     </form>
   </div>
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<script src="script.js"></script>
+  <!-- AS - fixed indentation here -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
