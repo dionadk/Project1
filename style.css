@@ -1,3 +1,9 @@
+/* AS - Be consistent with spacing throughout here, either use
+one or two lines between each css selector. Also with color types
+I would use either RGB or HEX rather than a mix of both. 
+You could also set the font on the body rather than repeating that
+selector in most divs that have text. 
+*/
 body {
     background-color: rgb(253, 163, 69);
     background-repeat: no-repeat;
@@ -70,6 +76,8 @@ h3 {
 #lossSummary {
     color: rgb(27, 137, 174);
 }
+/* AS - these next two selectors are the same,
+ add .image to the first one  */
 .display-score,
 .gameWord-flex {
     display: flex;
