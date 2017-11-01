@@ -8,7 +8,11 @@ class myWords {
 myWords.movies = ['jaws', 'titanic', 'back to the future', 'forrest gump', 'star wars', 'rocky', 'the dark knight'];
 myWords.food = ['pizza', 'burger', 'hot dog', 'noodles', 'pasta', 'salad', 'ravioli', 'buritto','soup'];
 myWords.sports = ['basket ball', 'hockey', 'soccer', 'tennis', 'base ball', 'rugby', 'cricket', 'volley ball'];
-
+// let myWords = {
+//    movies: ['jaws', 'titanic', 'back to the future', 'forrest gump', 'star wars', 'rocky', 'the dark knight'],
+//    food: ['pizza', 'burger', 'hot dog', 'noodles', 'pasta', 'salad', 'ravioli', 'buritto', 'soup'],
+//    sports: ['basket ball', 'hockey', 'soccer', 'tennis', 'base ball', 'rugby', 'cricket', 'volley ball']
+//  }
 var userWord = []; //empty array to generate blank spaces
 var score = 0; //t track your chances
 var chances = 6; // max cahnce to try
@@ -39,10 +43,25 @@ $("#selCategory").on("change", function(e) {
   //generateWord();
 
 });
-// event listener to call the guess letter function
+//counter
+// $("#restart").on( "click",function(e){
+//    var counter = 20;
+//    setInterval(function() {
+//      counter--;
+//       if (counter >= 0) {
+//          span = document.getElementById("count");
+//          span.innerHTML = counter;
+//       }
+//       if (counter === 0) {
+//          alert('sorry, out of time');
+//          clearInterval(counter);
+//        }
+//      }, 1000);
+// });
+// // event listener to call the guess letter function
 $("#guess").on("click", function(e) {
   e.preventDefault();
-  //checking for spaces in a string with 2 words
+  //checking for spaces iin user input field
   if (document.getElementById("letter").value.trim() == '')
   return;
   guessLetter(document.getElementById("letter").value.trim());
@@ -61,6 +80,7 @@ function restart() {
   document.getElementById("guessLet").innerText = guessAlphabet;
   generateWord();
 }
+
 // generate random word
 function generateWord() {
   var selectWord = '';
@@ -80,7 +100,7 @@ function generateWord() {
 
 //user inputs and checking for match
 function guessLetter(letter) {
-  if (chances - count === 0)
+  if (chances - count === 0) //disble user to try once the game is over
   return;
   // array to keep track of the letters entered by user
   if (guessAlphabet.includes(letter))

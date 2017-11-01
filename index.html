@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
 	<title>Hangman</title>
 </head>
 
@@ -40,6 +41,8 @@
 		<div class="win-flex">
 			<h3 id="winSummary">0</h3>
 		</div>
+		<div class="counter"> <span id="count"></span>
+			</div>
 		<div class="loss-flex">
 			<h3 id="lossSummary">0</h3>
 		</div>
@@ -63,7 +66,7 @@
 	<!-- input word -->
 	<div class="textForm">
     <form>
-		<input type="text" maxlength="1" id="letter" placeholder="Guess a letter" />
+		<input type="text" maxlength="1" id="letter" placeholder="?" />
 		<input id="guess" name="guess" type="submit" value="Guess" />
 		<button id="restart" name="restart" type="button">New Word</button>
     </form>

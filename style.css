@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(253, 163, 69);
+    background: url("http://pbceda.org/wp-content/uploads/2017/05/valspar-tintable-chalkboard-paint-chalkboard-background-489-toy-box-with-chalkboard.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -8,8 +8,9 @@ body {
 .flex-container {
     display: flex;
     height: 85px;
-    box-shadow: 1px 2px 5px gray;
-    background-color: rgb(27, 137, 174);
+    padding: 0 50px;
+    /*box-shadow: 1px 2px 5px gray;
+    background-color: rgb(27, 137, 174);*/
 }
 .header {
     flex-grow: 2;
@@ -25,7 +26,8 @@ h3 {
     font-size: 25px;
     margin: 0;
     padding: 30px 0 30px 10px;
-    font-family: 'Monoton', cursive;
+        color: #fff;
+        font-family: 'Walter Turncoat', cursive;
 }
 /*drop down style*/
 #category {
@@ -63,12 +65,13 @@ h3 {
 }
 #win,
 #loss {
-    color: rgb(27, 137, 174);
-    font-family: 'Monoton', cursive;
+    color: #fff;
+    font-family: 'Walter Turncoat', cursive;
 }
 #winSummary,
 #lossSummary {
-    color: rgb(27, 137, 174);
+    color: #fff;
+    font-family: 'Walter Turncoat', cursive;
 }
 .display-score,
 .gameWord-flex {
@@ -105,15 +108,36 @@ h3 {
     border: 20px;
     float: right;
     font-size: 25px;
-    font-family: 'Nixie One', cursive;
+        color: #fff;
+        font-family: 'Walter Turncoat', cursive;
     text-decoration: line-through;
 }
 
+#disable{
+  color: gray;
+  text-decoration: line-through;
+}
+#guess,
+#restart{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    height: 35px;
+    padding: 0 20px;
+    font-family: 'Walter Turncoat', cursive;
+    cursor: pointer;
+  }
+  #guess:hover,
+  #restart:hover{
+    color: #5a8371;
+    background: #fff;
+  }
 
 #gameWord {
-    color: rgb(27, 137, 174);
+    color: #fff;
+    font-family: 'Walter Turncoat', cursive;
     margin-left: 50px;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     font-size: 50px;
     text-align: center;
     padding-right: 50px;
@@ -123,3 +147,14 @@ h3 {
     text-align: center;
     padding: 20px;
 }
+#letter{
+    background: #fff;
+    border: 1px solid;
+    width: 36px;
+    color: #5a8371;
+    border-bottom: 1px solid;
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 40px;
+    padding-left: 17px;
+    outline: none;
+  }
